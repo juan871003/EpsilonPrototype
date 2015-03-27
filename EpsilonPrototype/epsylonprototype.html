@@ -4,21 +4,36 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <script src="JavaScript.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
     <title>Epsylon Prototype</title>
 </head>
 <body>
     <div class="frame">
-        <div class="table">
+        <div class="table" id="imagesTable">
             <div class="row">
-                <div class="imageContainer column" id="fixedImageContainer1"></div>
-                <div class="imageContainer column" id="fixedImageContainer2"></div>
-                <div class="imageContainer column" id="fixedImageContainer3"></div>
+                <div class="imageContainer column" id="fixedImageContainer1">
+                    <img class=" image" alt="image 1" src="/images/image1.jpg" draggable="false" />
+                </div>
+                <div class="imageContainer column" id="fixedImageContainer2">
+                    <img class="image" alt="image 2" src="/images/image2.jpg" draggable="false" />
+                </div>
+                <div class="imageContainer column" id="fixedImageContainer3">
+                    <img class="image" alt="image 3" src="/images/image3.jpg" draggable="false" />
+                </div>
             </div>
             <div class="row" id="space"></div>
             <div class="row">
-                <div class="imageContainer column" id="imageContainer1"></div>
-                <div class="imageContainer column" id="imageContainer2"></div>
-                <div class="imageContainer column" id="imageContainer3"></div>
+                <div class="imageContainer column" id="imageContainer1">
+                    <img id="img3" class="image draggable" alt="image 3" src="/images/image3.jpg" draggable="true" />
+                </div>
+                <div class="imageContainer column" id="imageContainer2">
+                    <img id="img2" class="image draggable" alt="image 2" src="/images/image2.jpg" draggable="true" />
+                </div>
+                <div class="imageContainer column" id="imageContainer3">
+                    <img id="img1" class="image draggable" alt="image 1" src="/images/image1.jpg" draggable="true" />
+                </div>
             </div>
             <div class="row">
                 <div class="column"></div>

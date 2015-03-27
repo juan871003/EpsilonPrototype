@@ -34,3 +34,10 @@ div.imageContainer {
     border: thin solid;
     border-color: black;
 }
+
+img.image {
+    width: 230px;
+    height: 150px;
+}
+
+img.image.ui-draggable-dragging { z-index:10 }

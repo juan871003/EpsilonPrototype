@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="epsylonprototype.html" />
+    <Content Include="JavaScript.js" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
