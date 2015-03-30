@@ -1,15 +1,45 @@
-﻿window.onload = function() {
+﻿window.onload = function () {
+    $(".imageContainer").each(function () {
+        $(this).has("img").removeClass("droppable");
+        $(this).not(":has('img')").addClass("droppable");
+    });
+
     $('.image.draggable').draggable({
+        revert: "invalid",
         containment: '#imagesTable',
-        start: dragStarted,
-        stop: dragStopped
+        addClasses: false//,
+        //stop: dragStopped
+    });
+
+    $(".droppable").droppable({
+        activeClass: "dragHere",
+        hoverClass: "dropHere",
+        accept: ".image",
+        addClasses: false,
+        drop: dropped
     });
 }
 
-function dragStarted(event, ui) {
+function dropped(event, ui) {
+    $(this).append(ui.draggable);
+    ui.draggable.position({
+        my: "left top",
+        at: "left top",
+        of: this,
+        collision: "none"
+    });
+    $(".droppable").droppable("destroy");
 
-}
+    $(".imageContainer").each(function () {
+        $(this).has("img").removeClass("droppable");
+        $(this).not(":has('img')").addClass("droppable");
+    });
 
-function dragStopped(event, ui) {
-
+    $(".droppable").droppable({
+        activeClass: "dragHere",
+        hoverClass: "dropHere",
+        accept: ".image",
+        addClasses: false,
+        drop: dropped
+    });
 }

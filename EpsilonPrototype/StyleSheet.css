@@ -35,6 +35,14 @@ div.imageContainer {
     border-color: black;
 }
 
+div.imageContainer.dragHere {
+    background-color: darkgray;
+}
+
+div.imageContainer.dropHere {
+    background-color: gray;
+}
+
 img.image {
     width: 230px;
     height: 150px;
